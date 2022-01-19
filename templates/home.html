@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sustainable Socity</title>
+        <link rel="stylesheet" href="{% static '/home.scss' %}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            font-family: paralucent;
+            background-color: #fcfbf5
+        }
+        /* background */
+        .underlay {
+            position: absolute;
+            z-index: 1;
+            overflow-x: hidden;
+            width: 100vw;
+            height: 550vh;
+        }
+        .underlay .blue-triangle {
+            position: absolute;
+            content: url(https://sustainablewebdesign.org/wp-content/themes/swdorg/public/images/blue-triangle.svg);
+            top: 1986px;
+            left: -430px;
+        }
+        .underlay .orange-square {
+            position: absolute;
+            content: url(https://sustainablewebdesign.org/wp-content/themes/swdorg/public/images/orange-square.svg);
+        }
+        .underlay .orange-square.os1 {
+            top: -1160px;
+            left: -230px;
+        }
+        .underlay .orange-square.os2 {
+            top: 930px;
+            right: -1180px;
+        }
+        .underlay .yellow-triangle.yt1 {
+            top: -200px;
+            right: -400px;
+        }
+        .underlay .yellow-triangle {
+            position: absolute;
+            content: url(https://sustainablewebdesign.org/wp-content/themes/swdorg/public/images/yellow-triangle.svg);
+        }
+        .underlay .yellow-triangle.yt2 {
+            top: 4870px;
+            left: -350px;
+        }
+        .underlay .blue-blob {
+            position: absolute;
+            content: url(https://sustainablewebdesign.org/wp-content/themes/swdorg/public/images/blue-blob.svg);
+            top: 5170px;
+            right: 50px;
+        }
+        .underlay .red-rectangle {
+            position: absolute;
+            content: url(https://sustainablewebdesign.org/wp-content/themes/swdorg/public/images/red-rectangle.svg);
+        }
+        .underlay .red-rectangle.rr1 {
+            top: 1000px;
+            left: -300px;
+        }
+        .underlay .red-rectangle.rr2 {
+            top: 5700px;
+            left: -90px;
+        }
+        /* wrapper */
+        .wrapper{
+            position: relative;
+            z-index: 10;
+        }
+
+        .bodycontainer{
+            display: flex;
+        }
+
+        .container{
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contain-left {
+            max-width: 750px;
+        }
+        @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+        }
+
+        h1{
+            font-family: paralucent,sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 5rem;
+            line-height: 1;
+        }
+
+        .bodycontainer p.large, p.large {
+            font-family: 'Courier New',Courier,monospace;
+            font-size: 1.4rem;
+        }
+
+        .myp{
+            font-family: 'Courier New',Courier,monospace;
+            font-size: 1.5rem;
+        }
+
+        .contain-center {
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h2 {
+                font-family: paralucent,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 5.2rem;
+                line-height: 1.12;
+            } 
+            
+            h3 {
+                font-family: paralucent,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 2.2rem;
+                line-height: 1.12;
+            }
+
+
+
+
+        /* circles part */
+
+        .stats {
+            margin-top: 200px;
+            margin-bottom: 100px;
+            color: #000;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .stats .stat {
+            background-color: #00e8c5;
+            border-radius: 50%;
+            padding: 5rem;
+            height: 20rem;
+            width: 20rem;
+            text-align: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .stats .stat:first-child {
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+        }
+        .stats .stat:nth-child(2) {
+            margin-top: -40px;
+            -ms-flex-item-align: center;
+            align-self: center;
+        }
+
+        .stats .stat:last-child {
+            margin-top: -40px;
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+        }
+
+        .stats p{
+            font-family: 'Courier New',Courier,monospace;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* header */
+        header#site-header {
+            font-size: 1.8rem;
+            background-color: #00e8c5;
+            margin-bottom: 100px;
+            height: 6rem;
+        }
+        .logo a img{
+            height: 6rem;
+        }
+
+        .nav{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .name a{
+            font-family: "Courier New",Courier,monospace;
+            color: #000;
+            text-decoration: none;
+            background-color: transparent;
+            font-weight: bold;
+        }
+
+        /* copy right */
+        .copyright {
+            margin: 0;
+            font-family: 'Courier New',Courier,monospace;
+            font-size: 1.6rem;
+            padding: 20px 80px;
+            background: aquamarine;
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+    <body>
+
+        <div class="underlay">
+            <div class="blue-triangle"></div>
+            <div class="orange-square os1"></div>
+            <div class="orange-square os2"></div>
+            <div class="yellow-triangle yt1"></div>
+            <div class="yellow-triangle yt2"></div>
+            <div class="blue-blob"></div>
+            <div class="red-rectangle rr1"></div>
+            <div class="red-rectangle rr2"></div>
+        </div>
+        <div class="wrapper">
+            <header id="site-header" role="banner">
+                <div class="container">
+                    <div class="nav">
+                        <div class="logo">
+                            <a href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
+                                <img src="{% static 'logo.JPG' %}" alt="">
+                            </a>
+                        </div>  
+                        <div class="name">
+                            <a href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
+                                <p>Sustainable Socity</p>
+                            </a>
+                        </div>     
+            </header>
+            <div class="container bodycontainer"><main id="main" tabindex="-1">
+ 
+                <h1 class="contain-left">Why Sustainable is important?</h1>
+                
+                <p class="contain-left large">Sustainability improves the quality of our lives, protects our ecosystem and preserves natural resources for future generations. In the corporate world, sustainability iS associated with an organization's holistic approach, taking into account everything, from manufacturing to logistics to customer service. Going green and sustainable is not only beneficial for the company; it also maximizes the benefits from an environmental focus in the long-term.</p>
+                
+                <div style="height:130px" aria-hidden="true" class="wp-block-spacer"></div>
+                 
+                <h2 class="contain-center">The problem</h2>
+                
+                
+                <p class="contain-center myp">The internet currently produces approximately 3.8% of global carbon emissions, which are rising in line with our hunger to consume more data. Increasingly, web technologies are also being used to sow discontent, erode privacy, prompt unethical decisions, and, in some countries, undermine personal freedoms and the well-being of society.</p>
+                
+                
+                <div class="stats">
+                    <div class="stat">
+                        <p> Avoid Disposable Items</p>
+                    </div>
+                    <div class="stat">
+                        <p>Make your Household Chemicals</p>
+                    </div>
+                    <div class="stat">
+                        <p>Transition to Renewable Enery</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <figure class="wp-block-image size-large contain-center"><img loading="lazy" width="412" height="313" src="https://live-swdorg.pantheonsite.io/wp-content/uploads/2021/01/arrows.svg" alt="" class="wp-image-233"></figure>
+                
+                
+                
+                <div class="wp-block-group contain-center">
+                    <div class="wp-block-group__inner-container">
+                        <h2 class="contain-center">Business Ascpects of Sustainability</h2>
+                        
+                        <h3>Partener With Non-Profit organization</h3>
+                        <p class="myp">
+                            Businesses new to the world of sustainability can form partnerships with nonprofit organizations in the space that interests them. Many such organizations exist and have the resources and experience necessary to help you get your efforts off the ground.
+                        </p>
+                        <h3>Educated Employees</h3>
+                        <p class="myp">Another excellent means of involving your employees in the sustainability process is to take steps that encourage volunteerism. You might provide paid time off for employees who wish to volunteer, sometimes known as volunteer time off (VTO). Even providing as little as one or two days of VTO per year can go a long way in empowering your employees. Similarly, you can consider organizing a company-wide volunteer drive or day of giving, wherein your employees are encouraged to volunteer at local charities or for causes they're passionate about.</p>
+
+                        <h3>Encourage Volunteerism</h3>
+                        <p class="myp">
+                            Another excellent means of involving your employees in the sustainability process is to take steps that encourage volunteerism. You might provide paid time off for employees who wish to volunteer, sometimes known as volunteer time off (VTO). Even providing as little as one or two days of VTO per year can go a long way in empowering your employees. Similarly, you can consider organizing a company-wide volunteer drive or day of giving, wherein your employees are encouraged to volunteer at local charities or for causes they're passionate about.
+                        </p>
+                
+                </div>
+            </div>
+                
+                
+                
+                <div class="wp-block-columns">
+                    <div class="wp-block-column" style="flex-basis:40%">
+                        <h2>Sustainability Practice you can follow at Home</h2>
+                                    
+                        <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Eat Locally </h3>
+                        <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Live Smaller </h3>
+                        <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Make Your Own Cosmetics </h3>
+                        <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Buy Used </h3>
+                        <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Be a Socially Conscious Consumer </h3>
+                
+                    </div>
+                </div>
+                
+            </main>
+            </div>
+            <div class="copyright">Connect Us on <a href="https://www.instagram.com/elearno_/"><i class="fab fa-instagram"></i></a>
+                <a href="https://drive.google.com/file/d/1Qs5QN4Il4QSGKf8mm6_JuDZVGcGPBvQ1/view?usp=sharing"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </body>
+</html>
