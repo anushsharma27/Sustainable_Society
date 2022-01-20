@@ -229,6 +229,24 @@
             text-align: center;
             margin-top: 10%;
         }
+
+        /* change button to delete */
+       #love{
+            padding: 10px;
+            border: 0.4rem solid #ff495c;
+            background: transparent;
+            cursor: pointer;
+        }
+        #love:hover{
+            background-color: #ff495c;
+        }
+
+        #love p{
+            font-family: 'Courier New',Courier,monospace;
+            font-size: 1.5rem;
+            font-weight: bold;
+            outline: none;
+        }
     </style>
     <body>
 
@@ -247,12 +265,12 @@
                 <div class="container">
                     <div class="nav">
                         <div class="logo">
-                            <a href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
+                            <a target=blank href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
                                 <img src="{% static 'logo.JPG' %}" alt="">
                             </a>
                         </div>  
                         <div class="name">
-                            <a href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
+                            <a target=blank href="https://www.instagram.com/elearno_/" title="Sustainable Socity" rel="home">
                                 <p>Sustainable Socity</p>
                             </a>
                         </div>     
@@ -294,13 +312,12 @@
                 <div class="wp-block-group contain-center">
                     <div class="wp-block-group__inner-container">
                         <h2 class="contain-center">Business Ascpects of Sustainability</h2>
-                        
                         <h3>Partener With Non-Profit organization</h3>
                         <p class="myp">
                             Businesses new to the world of sustainability can form partnerships with nonprofit organizations in the space that interests them. Many such organizations exist and have the resources and experience necessary to help you get your efforts off the ground.
                         </p>
                         <h3>Educated Employees</h3>
-                        <p class="myp">Another excellent means of involving your employees in the sustainability process is to take steps that encourage volunteerism. You might provide paid time off for employees who wish to volunteer, sometimes known as volunteer time off (VTO). Even providing as little as one or two days of VTO per year can go a long way in empowering your employees. Similarly, you can consider organizing a company-wide volunteer drive or day of giving, wherein your employees are encouraged to volunteer at local charities or for causes they're passionate about.</p>
+                        <p class="myp">Another excellent means of involving your employees in the sustainability process is to take steps that encourage volunteerism. You might provide paid time off for employees who wish to volunteer, sometimes known as volunteer time off (VTO). Even providing as little as one or two days of VTO per year can go a long way in empowering your employees. Similarly, you can consider organizing a company-wide volunteer drive or day of giving, wherein your<a target=blank href="https://drive.google.com/file/d/1gknhj6Azx1x05VA6Td-RBUp4-mwo9jPj/view?usp=sharing" style="text-decoration: none;"> love</a> employees are encouraged to volunteer at local charities or for causes they're passionate about.</p>
 
                         <h3>Encourage Volunteerism</h3>
                         <p class="myp">
@@ -309,13 +326,27 @@
                 
                 </div>
             </div>
-                
-                
+            <div class="wp-block-columns" style="display: flex; justify-content: center;">
+                <div class="main_div">
+                    <h3>Love Counter!!!</h3>
+                    <h2>
+                        <div id="counter"  style="text-align:center;">
+                        0
+                        </div>
+                    </h2>
+                    <div class="addBtn"  style="display: flex; justify-content: center;">
+                        <button id="love" onclick="myFunction()">
+                            <p>I love Anush</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
                 
                 <div class="wp-block-columns">
                     <div class="wp-block-column" style="flex-basis:40%">
                         <h2>Sustainability Practice you can follow at Home</h2>
-                                    
+                        <img src="{% static 'My_PDF.png' %}" style="width: 100px; position: absolute; right: 195px;">
                         <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Eat Locally </h3>
                         <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Live Smaller </h3>
                         <h3 style="width: 80%; margin: auto;"> <i class="fas fa-chevron-right"></i> Make Your Own Cosmetics </h3>
@@ -327,9 +358,20 @@
                 
             </main>
             </div>
-            <div class="copyright">Connect Us on <a href="https://www.instagram.com/elearno_/"><i class="fab fa-instagram"></i></a>
-                <a href="https://drive.google.com/file/d/1Qs5QN4Il4QSGKf8mm6_JuDZVGcGPBvQ1/view?usp=sharing"><i class="fas fa-heart"></i></a>
+            <div class="copyright">Connect Us on <a target=blank href="https://www.instagram.com/elearno_/"><i class="fab fa-instagram"></i></a>
+                <a target=blank href="https://drive.google.com/file/d/1Qs5QN4Il4QSGKf8mm6_JuDZVGcGPBvQ1/view?usp=sharing"><i class="fas fa-heart"></i></a>
             </div>
         </div>
     </body>
+    <script>
+        let counter=0;
+        localStorage.setItem("lastname", counter);
+        function myFunction() {
+            counter=counter+1;
+            localStorage.setItem("lastname", counter);
+            let value = localStorage.getItem("lastname");
+            document.getElementById("counter").innerHTML = value;
+            alert('He loves You back Kamia❤️!!');
+            }
+    </script>
 </html>
